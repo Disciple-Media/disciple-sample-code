@@ -7,7 +7,7 @@
 ## Example
 
 ```bash
-echo '{ id: "test" }' | php encrypt.php 'b9885b819dfffe68fa30c47fdd48c6f8d0ee900c2a523a8647b43240dc64c5ec' | php decrypt.php 'b9885b819dfffe68fa30c47fdd48c6f8d0ee900c2a523a8647b43240dc64c5ec'
+printf '{ id: "test" }' | php encrypt.php 'b9885b819dfffe68fa30c47fdd48c6f8d0ee900c2a523a8647b43240dc64c5ec' | php decrypt.php 'b9885b819dfffe68fa30c47fdd48c6f8d0ee900c2a523a8647b43240dc64c5ec'
 ```
 
 ## Dependencies
