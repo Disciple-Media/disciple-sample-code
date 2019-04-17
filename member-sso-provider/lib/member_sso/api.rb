@@ -12,7 +12,7 @@ module MemberSSO
       end
       get do
         if params[:email].present?
-          { "users" => @@users.select { |u| u["email"] == params[:email] } }
+          { "users" => @@users.select { |u| u[:email] == params[:email] } }
         else
           { "users" => [] }
         end
@@ -23,7 +23,7 @@ module MemberSSO
       end
       route_param :id do
         get do
-          if (user = @@users.find { |u| u["id"] == params[:id] })
+          if (user = @@users.find { |u| u[:id] == params[:id] })
             { "user" => user }
           else
             status 404
